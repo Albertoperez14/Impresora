@@ -1,5 +1,7 @@
 package Pojos;
 
+import Enums.TipoCursos;
+
 import java.util.ArrayList;
 
 public class DAOCola {
@@ -7,6 +9,7 @@ public class DAOCola {
     private ArrayList<Trabajo> trabajos;
     private DAOCola() {
         trabajos = new ArrayList<>();
+        Trabajo trabajo = new Trabajo(new Alumno("Juan","213213d", TipoCursos.Primero),new DocuHistorico(2,"dsadsadsad"));
     }
 
     public static DAOCola getInstancia() {

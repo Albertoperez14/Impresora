@@ -1,11 +1,13 @@
 package Pojos;
 
-public abstract class Documento {
+public class Documento {
 
     private int numPaginas;
+    private String texto;
 
-    public Documento(int numPaginas) {
+    public Documento(int numPaginas,String texto) {
         this.numPaginas = numPaginas;
+        this.texto = texto;
     }
     public int getNumPaginas() {
         return numPaginas;
@@ -14,7 +16,7 @@ public abstract class Documento {
         this.numPaginas = numPaginas;
     }
     public String toString() {
-        return "Alumno{" + "numPaginas=" + numPaginas + '}';
+        return "Alumno{" + "numPaginas=" + numPaginas +"texto=" + texto + '}';
     }
 
 }

@@ -6,8 +6,8 @@ public class DocuHistorico extends Documento {
 
 
     Date fechaImpri;
-    public DocuHistorico(int numPaginas) {
-        super(numPaginas);
+    public DocuHistorico(int numPaginas,String texto) {
+        super(numPaginas,texto);
         this.fechaImpri = new Date();
     }
 

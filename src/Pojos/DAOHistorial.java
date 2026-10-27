@@ -1,13 +1,14 @@
 package Pojos;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+
+import java.util.TreeMap;
 
 public class DAOHistorial {
     private static DAOHistorial instancia;
-    private HashMap<String,ArrayList<Trabajo>> historial;
+    private TreeMap<Cliente,Historico> historial  ;
     private DAOHistorial() {
-        historial = new HashMap<>();
+        historial = new TreeMap<>();
     }
 
     public static DAOHistorial getInstancia() {
@@ -30,7 +31,7 @@ public class DAOHistorial {
     public ArrayList<Trabajo> buscarPorDni(String dni) {
         return historial.get(dni);
     }
-    public HashMap<String, ArrayList<Trabajo>> getHistorial() {
+    public TreeMap<String, ArrayList<Trabajo>> getHistorial() {
         return historial;
     }
 
